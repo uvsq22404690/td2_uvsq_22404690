@@ -27,10 +27,14 @@ Il pourra éventuellement être nécessaire de [configurer le proxy](http://mave
 À chaque étape, validez vos modifications avec `git` et si nécessaire, exécutez le cycle maven adapté pour vérifier vos manipulations.
 
 1.  Quelles conventions utilise Maven pour l’arborescence des répertoires ?
-    > RÉPONDRE ICI
+    > L'arborescence d'un projet Maven se constitut du dossier principal ou on y accède avec le chemin du dossier
+ainsi contenant plusieurs sous dossiers, le dossier /src arbite le code source et les ressources, /main pour le code principal  
+    (java et ressources) et /test pour trouver les testes unitaires, le dossier /target est généré par Maven et contient des fichiers
+crées lors de la compilation et du packaging, le fichier pom.xml décrit les dépéndences et les configurations du projet. Toute cette structure
+est importante pour le faciliter le développement et la gestion de l'application en question
 1.  Examinez le projet Maven ainsi que le fichier de description et répondez aux questions suivantes :
     1.  Dans quel répertoire se trouvent les fichiers sources du projet ? Les sources des tests ?
-        > RÉPONDRE ICI
+        > 
     1. Quelles sont les coordonnées du projet ?
         > RÉPONDRE ICI
     1. À quoi sert la propriété `project.build.sourceEncoding` ?
