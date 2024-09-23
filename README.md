@@ -42,11 +42,26 @@ est importante pour le faciliter le développement et la gestion de l'applicatio
       <version>4.11</version>; Junit pour l'organisation qui développe le projet (groupID) et l'identifiant unique du projet (artifactID),
 ses informations se trouvent dans le ffichier pom.xml et ces élements représentent un clé dans la gestion des dépendences de MAVEN
     1. À quoi sert la propriété `project.build.sourceEncoding` ?
-        > RÉPONDRE ICI
+        > la propriété project.build.sourceEncoding se que on retrouve dans notre fichier pom.xml La propriété project.build.sourceEncoding dans le fichier pom.xml définit l'encodage des fichiers source de notre projet. 
+Elle garantit que tous les développeurs, peu importe leur environnement, utilisent le même encodage, ce qui évite des erreurs de compilation et des problèmes avec les caractères spéciaux. 
+En utilisant par exemple UTF-8, on assures la cohérence et la lisibilité du code pour tous.
+ 
     1. Quelles versions des sources et de la JVM sont utilisés ?
-        > RÉPONDRE ICI
+        > Dans le fichier pom.xml, on utilise les propriétés maven.compiler.source et maven.compiler.target 
+pour spécifier les versions des sources et de la JVM. Par exemple, si on veut utiliser Java 8 ce qui est le cas dans notre projet
+"<maven.compiler.source>1.8</maven.compiler.source>
+<maven.compiler.target>1.8</maven.compiler.target>" Cela garantit que notre code est compilé et exécuté avec la version de Java qu'on a choisie. 
+C'est important pour éviter les problèmes d'incompatibilité et s'assurer que tout fonctionne correctement.
     1. Quelle version de JUnit est configurée ? À quoi sert la balise `scope` ?
-        > RÉPONDRE ICI
+        > La version de JUnit qui est configurée est la 4.11
+<dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <scope>test</scope>
+    </dependency>
+       La balise scope dans le fichier pom.xml détermine où et comment une dépendance est utilisée. Par exemple, en définissant scope sur test, on indiques que la dépendance (comme JUnit) est uniquement pour les tests et ne sera pas incluse dans le code final de l'application. 
+Cela permet de garder le paquet léger et de séparer les outils de test du code de production.
     1. À quoi sert la section `pluginManagement` ?
         > RÉPONDRE ICI
 1.  Modifiez la configuration du projet de la façon suivante :
