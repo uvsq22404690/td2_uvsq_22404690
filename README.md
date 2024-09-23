@@ -34,9 +34,13 @@ crées lors de la compilation et du packaging, le fichier pom.xml décrit les d�
 est importante pour le faciliter le développement et la gestion de l'application en question
 1.  Examinez le projet Maven ainsi que le fichier de description et répondez aux questions suivantes :
     1.  Dans quel répertoire se trouvent les fichiers sources du projet ? Les sources des tests ?
-        > 
+        > Les fichiers sources du projet se trouvent dans "/src/main/java" et les sources des tests son situées dans le répértoire 
+"/src/test/java"
     1. Quelles sont les coordonnées du projet ?
-        > RÉPONDRE ICI
+    > <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>; Junit pour l'organisation qui développe le projet (groupID) et l'identifiant unique du projet (artifactID),
+ses informations se trouvent dans le ffichier pom.xml et ces élements représentent un clé dans la gestion des dépendences de MAVEN
     1. À quoi sert la propriété `project.build.sourceEncoding` ?
         > RÉPONDRE ICI
     1. Quelles versions des sources et de la JVM sont utilisés ?
