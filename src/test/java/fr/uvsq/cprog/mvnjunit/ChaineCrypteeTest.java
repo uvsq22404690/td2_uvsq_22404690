@@ -1,6 +1,5 @@
 package fr.uvsq.cprog.mvnjunit;
 
-
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -15,7 +14,7 @@ public class ChaineCrypteeTest {
     @Test
     public void testDecrypte() {
         ChaineCryptee chaine = ChaineCryptee.deCryptee("KHOOR", 3);
-        assertEquals("HELLO", chaine.decrypte());
+        assertEquals("HELLO", chaine.decrypte("KHOOR"));
     }
 
     @Test
@@ -27,7 +26,12 @@ public class ChaineCrypteeTest {
     @Test
     public void testDecrypteEspace() {
         ChaineCryptee chaine = ChaineCryptee.deCryptee("KHOOR ZRUOG", 3);
-        assertEquals("HELLO WORLD", chaine.decrypte());
+        assertEquals("HELLO WORLD", chaine.decrypte("KHOOR ZRUOG"));
+    }
+
+    @Test
+    public void testCaractereSpecial() {
+        ChaineCryptee chaine = ChaineCryptee.deEnClair("A B C", 1);
+        assertEquals("B C D", chaine.crypte());
     }
 }
-
