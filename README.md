@@ -78,7 +78,20 @@ Cela permet de garder le paquet léger et de séparer les outils de test du code
 1.  Ajoutez une classe `ChaineCryptee` et une classe `ChaineCrypteeTest` dans les répertoires et packages appropriés.
     Supprimez les classes d'exemple `App` et `AppTest`.
 1.  Énumérez une liste de cas de tests à réaliser en n'oubliant pas les cas d'erreur.
-    > RÉPONDRE ICI
+    > Chiffrement d'une chaîne : On teste si la méthode de chiffrement fonctionne correctement en prenant la chaîne "TOTOX" avec un décalage de 3. On s'attend à ce qu'elle renvoie "WRWRA".
+    Erreur Chiffrement d'une chaîne : On vérifie que le chiffrement ne donne pas un résultat aléatoire. Avec "TOTOX" et un décalage de 3, on s'assure que le résultat n'est pas "PEBLA".
+
+Déchiffrement d'une chaîne : On vérifie si la méthode de déchiffrement fait bien son travail avec la chaîne "WRWRA" et un décalage de 3, en s'attendant à obtenir "TOTOX".
+Erreur Déchiffrement d'une chaîne : On vérifie que le déchiffrement ne renvoie pas un résultat incorrect. Avec "WRWRA", on s'assure que le résultat n'est pas "KALIN".
+
+Chiffrement avec des espaces : On s'assure que la méthode de chiffrement préserve les espaces. Pour la chaîne "HELLO WORLD" avec un décalage de 3, le résultat attendu est "KHOOR ZRUOG".
+Erreur Chiffrement avec des espaces : On vérifie que le chiffrement ne produit pas un résultat incorrect avec des espaces. En prenant "HELLO WORLD", on s'assure que le résultat n'est pas "MARLE POSBER".
+
+Déchiffrement avec des espaces : On teste si le déchiffrement conserve également les espaces. En prenant "KHOOR ZRUOG" avec un décalage de 3, on s'attend à retrouver "HELLO WORLD".
+Erreur Déchiffrement avec des espaces : On vérifie que le déchiffrement ne donne pas un résultat incorrect avec des espaces. En utilisant "KHOOR ZRUOG", on s'assure que le résultat n'est pas "BEES".
+
+Chiffrement avec des caractères spéciaux : On vérifie que le chiffrement gère bien les espaces dans la chaîne "A B C" avec un décalage de 1. Le résultat attendu est "B C D".
+Erreur Chiffrement avec des caractères spéciaux  : On vérifie que le chiffrement ne produit pas de résultats inattendus pour des chaînes avec des espaces. Avec "A B C", on s'assure que le résultat n'est pas "T B D".
 1.  Pour chaque cas de test,
     1. écrivez le test JUnit correspondant dans la classe de test,
     1. vérifiez qu’il échoue,
