@@ -72,9 +72,9 @@ Cela permet de garder le paquet léger et de séparer les outils de test du code
     1.  créer un `jar` du projet ?
         > La commande mvn package permet de créer un jar dans le répertoire target/ à condition que notre projet utilise le packaging par défaut jar dans notre pom.xml
     1. lancer les tests ?
-        > RÉPONDRE ICI
+        > mvn test nous permet de lancer des test qui sont définis sur src/test/....ChaineCrypteeTest.java dans notre cas 
     1. supprimer tous les fichiers issus de la compilation ?
-        > RÉPONDRE ICI
+        > La commande mvn clean permet de procéder au nettoyage du projet Maven en supprimant tous les fichiers et dossiers créés lors des compilations précédentes, y compris le répertoire target/. Cela offre la possibilité de partir sur une base solide avant de reconstruire le projet. Cela est bénéfique afin d'éviter les désaccords ou les erreurs qui pourraient se produire en raison de fichiers obsolètes ou corrompus.
 1.  Ajoutez une classe `ChaineCryptee` et une classe `ChaineCrypteeTest` dans les répertoires et packages appropriés.
     Supprimez les classes d'exemple `App` et `AppTest`.
 1.  Énumérez une liste de cas de tests à réaliser en n'oubliant pas les cas d'erreur.
