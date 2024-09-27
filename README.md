@@ -54,12 +54,12 @@ pour spécifier les versions des sources et de la JVM. Par exemple, si on veut u
 C'est important pour éviter les problèmes d'incompatibilité et s'assurer que tout fonctionne correctement.
     1. Quelle version de JUnit est configurée ? À quoi sert la balise `scope` ?
         > La version de JUnit qui est configurée est la 4.11
-<dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.11</version>
-      <scope>test</scope>
-    </dependency>
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.11</version>
+        <scope>test</scope>
+        </dependency>
        La balise scope dans le fichier pom.xml détermine où et comment une dépendance est utilisée. Par exemple, en définissant scope sur test, on indiques que la dépendance (comme JUnit) est uniquement pour les tests et ne sera pas incluse dans le code final de l'application. 
 Cela permet de garder le paquet léger et de séparer les outils de test du code de production.
     1. À quoi sert la section `pluginManagement` ?

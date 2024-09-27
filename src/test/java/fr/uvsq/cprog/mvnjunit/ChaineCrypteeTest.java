@@ -7,14 +7,14 @@ public class ChaineCrypteeTest {
 
     @Test
     public void testCrypte() {
-        ChaineCryptee chaine = ChaineCryptee.deEnClair("HELLO", 3);
-        assertEquals("KHOOR", chaine.crypte());
+        ChaineCryptee chaine = ChaineCryptee.deEnClair("TOTOX", 3);
+        assertEquals("WRWRA", chaine.crypte());
     }
 
     @Test
     public void testDecrypte() {
-        ChaineCryptee chaine = ChaineCryptee.deCryptee("KHOOR", 3);
-        assertEquals("HELLO", chaine.decrypte("KHOOR"));
+        ChaineCryptee chaine = ChaineCryptee.deCryptee("WRWRA", 3);
+        assertEquals("TOTOX", chaine.decrypte("WRWRA"));
     }
 
     @Test
