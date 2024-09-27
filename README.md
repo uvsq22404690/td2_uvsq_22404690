@@ -63,14 +63,14 @@ C'est important pour éviter les problèmes d'incompatibilité et s'assurer que 
        La balise scope dans le fichier pom.xml détermine où et comment une dépendance est utilisée. Par exemple, en définissant scope sur test, on indiques que la dépendance (comme JUnit) est uniquement pour les tests et ne sera pas incluse dans le code final de l'application. 
 Cela permet de garder le paquet léger et de séparer les outils de test du code de production.
     1. À quoi sert la section `pluginManagement` ?
-        > RÉPONDRE ICI
+        > La section pluginManagement dans un projet Maven sert à définir, une fois pour toutes, comment les plugins doivent être utilisés (version, configuration) pour tout le projet et ses sous-projets. Ensuite, les sous-projets peuvent simplement dire "j'utilise ce plugin" sans avoir à répéter toute la configuration. C'est pratique pour garder tout bien organisé et éviter les incohérences.
 1.  Modifiez la configuration du projet de la façon suivante :
     1.  fixez la version des sources et des .class pour utiliser la version 17 de Java
     1.  utilisez la dernière version stable de JUnit 4 (cf. [MVNRepository](https://mvnrepository.com/))
 1.  Ajoutez un fichier `.gitignore` adapté aux projets Maven (cf. [A collection of .gitignore templates](https://github.com/github/gitignore)) et ajoutez-y les fichiers et répertoires de votre IDE.
 1.  Quelle commande Maven permet de :
     1.  créer un `jar` du projet ?
-        > RÉPONDRE ICI
+        > La commande mvn package permet de créer un jar dans le répertoire target/ à condition que notre projet utilise le packaging par défaut jar dans notre pom.xml
     1. lancer les tests ?
         > RÉPONDRE ICI
     1. supprimer tous les fichiers issus de la compilation ?

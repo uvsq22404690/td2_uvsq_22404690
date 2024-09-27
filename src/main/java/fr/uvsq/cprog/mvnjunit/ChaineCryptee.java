@@ -1,6 +1,6 @@
 package fr.uvsq.cprog.mvnjunit;
 
-public class ChaineCryptee {
+public class  ChaineCryptee {
     private String chaineEnClair;
     private int decalage;
 
